@@ -1,0 +1,85 @@
+/************************************************
+
+Stylesheet: Header Stylesheet
+
+*************************************************/
+
+/************************************************
+Header: nav-offcanvas-topbar.php
+*************************************************/
+.header-container {
+  padding: 1.25rem .9375rem;
+  @include breakpoint(small only) {
+    display: none;
+  }
+  .logo img {
+    width: 280px;
+  }
+}
+// Menu
+#menu-main-menu-1 {
+  float: left;
+  ul.submenu {
+    z-index: 9999;
+  }
+}
+.address-info,
+.hos-info {
+	float: none;
+	font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: $primary;
+  display: inline-block;
+  vertical-align: top;
+  text-align: right;
+  line-height: 20px;
+  margin: 0px 25px;
+  width: 120px;
+	@include breakpoint(medium) {
+		float: right;
+	}
+  a {
+    color: $primary;
+  }
+}
+.top-bar {
+  background-color: $primary;
+  .mobile-logo {
+    width: 120px;
+    @include breakpoint(medium) {
+      display: none;
+    }
+  }
+  ul {
+    background-color: transparent;
+    li a {
+      color: $white;
+      padding: 0 10px;
+      font-family: "Open Sans", sans-serif;
+      font-weight: 800;
+      font-size: 1rem;
+      text-transform: uppercase;
+      line-height: 30px;
+      background-color: $primary;
+    }
+  }
+  // Searh field
+  form.search-form {
+    float: right;
+    margin-top: .3rem;
+    label {
+      float: left;
+    }
+    input {
+      float: right;
+      max-width: 180px;
+      margin-bottom: 0px;
+    }
+  }
+  // Mobile
+  .mobile-home,
+  .mobile-menu {
+    flex: 0 0 auto;
+  }
+}
